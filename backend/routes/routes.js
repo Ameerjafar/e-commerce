@@ -1,10 +1,10 @@
 const express = require('express');
 const  router  = express.Router();
 
-const loginMiddleware = require('../middlewares/loginMiddleware');
+const userLoginMiddlware = require('../middlewares/userLoginMiddlerware');
 const userMiddleware = require('../middlewares/userMiddleware');
 
-router.post('/login', loginMiddleware, (req, res) => {
+router.post('/login', userLoginMiddlware, (req, res) => {
     res.status(200).json({message: "login successfully"});
 })
 router.post('/signup', userMiddleware, (req, res) => {
