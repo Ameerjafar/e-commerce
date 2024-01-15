@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+
 export function LoginComponent() {
     const [userInput, setInputValue] = useState("");
     const [passwordInput, setPassWordInput] = useState("");
@@ -25,7 +26,6 @@ export function LoginComponent() {
             setPassWordInput(events.target.value);
            }} placeholder='Enter your Password'></input><br></br>
            <button onClick={onClickHandler}>Login</button>
-           {message}
         </div>
     ) 
 }   
